@@ -11,6 +11,22 @@ Syndote consists of Master contract Player contracts. Master contract is the mai
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
+If you have error 
+```
+could not amend shell profile: '/Users/pe4enable/.bash_profile': could not write rcfile file: '/Users/pe4enable/.bash_profile': Permission denied (os error 13)
+```
+```
+curl https://sh.rustup.rs -sSf | bash -s -- -y --no-modify-path
+```
+
+If ypu use zsh
+
+add
+```
+export PATH="$HOME/.cargo/bin:$PATH"
+```
+to file ~/.zshrc and restart terminal
+
 ### ⚒️ Add specific toolchains
 
 ```shell
@@ -46,7 +62,7 @@ target
     └── wasm32-unknown-unknown
         └── release
             ├── ...
-            ├── syndote.wasm      <---- this is built .wasm file
+            ├── syndote.wasm      <---- this is built .wasm file //but why syndote if every where Master program?
             ├── syndote.opt.wasm  <---- this is optimized .wasm file
             ├── syndote.meta.wasm <---- this is meta .wasm file
             ├── player.wasm       <---- this is built .wasm file
@@ -54,7 +70,23 @@ target
             └── player.meta.wasm  <---- this is meta .wasm file
 ```
 
-## Running the game
+## Deploy program
+
+You can deploy programs using [idea.gear-tech.io](https://idea.gear-tech.io). 
+
+Be sure that you have Polkadot extention in your browser and account in it.
+
+
+1. In the network selector choose network "Workshop" (wss://node-workshop.gear.rs).
+2. Connect you Polkadot account
+2.1 To get test tokens push "Get test balance" near Balance //icon is not understandable, label too, too small amount of test tokens
+3. Push "Upload program" button
+4. Select syndote.opt.wasm file (or player.opt.wasm)
+5. For readable messages upload metadata (files syndote.meta.wasm and player.meta.wasm)
+6. Push "Calculate gas" button
+7. Push "Upload Program" 
+
+## Running the game from program
 
 To run the game you have to deploy the master contract and the players contracts to the network. During initialization the master contract is filled with monopoly card information (cell cost, special cells: jails, lottery, etc).
  
