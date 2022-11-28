@@ -1227,10 +1227,10 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@gear-js/api@^0.27.3":
-  version "0.27.3"
-  resolved "https://registry.yarnpkg.com/@gear-js/api/-/api-0.27.3.tgz#adbe9123f4c88fd89cd380a51d7870139c7d5a9e"
-  integrity sha512-0uetNSoutDVUBjKHt6uPBI+prt7XKs4m4LFqd0XcjPO1LofDdCTyS82C0RZNMHBP34Y1mfNQqRLUE6bpGfpGZA==
+"@gear-js/api@^0.27.6":
+  version "0.27.6"
+  resolved "https://registry.yarnpkg.com/@gear-js/api/-/api-0.27.6.tgz#8677cda4fdf284abba6692b2020861a5f582a614"
+  integrity sha512-ZiPiF0l1Bq91Y++wjcOUhgpVWvzyq1fQ88AtIkk5C0yJ0zEooNYhm24Cn769vy/9ZJvfxbWh1PH4zjTcyEzCcg==
 
 "@gear-js/react-hooks@^0.3.9":
   version "0.3.9"
